@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "scripts": {
+    "clean": "yarn workspace demo clean",
+    "serve": "yarn workspace demo serve",
+    "develop": "yarn workspace demo develop",
+    "build": "yarn workspace demo build",
+    "test": "yarn workspace @pauliescanlon/gatsby-remark-grid-system test",
+    "test:watch": "yarn workspace @pauliescanlon/gatsby-remark-grid-system test:watch",
+    "test:coverage": "yarn workspace @pauliescanlon/gatsby-remark-grid-system test:coverage",
+    "release": "node copy-readme.js && yarn workspace @pauliescanlon/gatsby-remark-grid-system publish"
+  },
+  "workspaces": [
+    "demo",
+    "@pauliescanlon/gatsby-remark-grid-system"
+  ]
+}
