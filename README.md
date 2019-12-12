@@ -1,7 +1,3 @@
-<a href="https://gatsby-remark-grid-system.netlify.com/" target="_blank">
-<img src="https://gatsby-remark-grid-system.netlify.com/images/remark-sticky-table.gif" alt="gatsby-remark-grid-system gif image" />
-</a>
-
 # gatsby-remark-grid-system
 
 gatsby-remark-grid-system is a plugin that creates responsive layouts from markdown files
