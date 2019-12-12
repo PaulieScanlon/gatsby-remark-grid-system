@@ -7,7 +7,7 @@
 gatsby-remark-grid-system is a plugin that creates responsive layouts from markdown files
 
 **Motivation**
-As much as i like blogs, do they all have to be single coloum?
+As much as i like blogs, do they all have to be single coloum? Arguably if you're using [gatsby-pugin-mdx](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-mdx) this is not problem but... if your blog / site / app uses `.md` this might be worth a look.
 
 ## 👁️ Preview
 
@@ -53,7 +53,7 @@ plugins: [
   {
     resolve: `@pauliescanlon/gatsby-remark-grid-system`,
     options: {
-
+      ...
     },
   },
 ]
@@ -61,9 +61,11 @@ plugins: [
 
 ## ✨ Styling
 
+TODO
+
 ## 📝 Markdown
 
-TODO `:::` ... `row` ... `col` ...
+TODO explain markdown a bit more `:::` ... `row` ... `col` ...
 
 ```
 ::: div row
