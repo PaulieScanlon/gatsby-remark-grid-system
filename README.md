@@ -4,9 +4,10 @@
 
 # gatsby-remark-grid-system
 
-gatsby-remark-grid-system is a plugin that...
+gatsby-remark-grid-system is a plugin that creates responsive layouts from markdown files
 
 **Motivation**
+As much as i like blogs, do they all have to be single coloum?
 
 ## 👁️ Preview
 
@@ -40,10 +41,11 @@ module.exports = {
 
 ### Options
 
-| Option      | Type   | Reqiured | Default               | Description                    |
-| ----------- | ------ | -------- | --------------------- | ------------------------------ |
-| breakpoints | array  | no       | [576, 768, 992, 1200] | bootstrap inspired breakpoings |
-| gutterWidth | number | no       | 30                    | gutter width ...               |
+| Option      | Type    | Reqiured | Default               | Description                    |
+| ----------- | ------- | -------- | --------------------- | ------------------------------ |
+| breakpoints | array   | no       | [576, 768, 992, 1200] | bootstrap inspired breakpoints |
+| padding     | number  | no       | 15                    | ...                            |
+| debug       | boolean | no       | false                 | ...                            |
 
 ```js
 ...
@@ -60,3 +62,19 @@ plugins: [
 ## ✨ Styling
 
 ## 📝 Markdown
+
+TODO `:::` ... `row` ... `col` ...
+
+```
+::: div row
+
+::: div col 12|6|7|9
+   left content 1
+:::
+
+::: div col 12|6|5|3
+   right content 1
+:::
+
+:::
+```

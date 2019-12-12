@@ -1,25 +1,34 @@
-const visit = require("unist-util-visit")
+const containers = require("remark-containers")
 
-const { createGrid } = require("./utils/create-grid")
+const {
+  createColClasses,
+  ROW,
+  COL,
+  BASE_CLASS,
+} = require("./src/create-col-classes")
 
-const VISITOR = "code"
+module.exports = ({ markdownAST }) => markdownAST
 
-module.exports = ({ markdownAST }, pluginOptions) => {
-  const { breakpoints, gutterWidth } = pluginOptions
+const options = {
+  default: true,
+  custom: [
+    {
+      type: "div",
+      transform: function(node, config, tokenize) {
+        if (config.indexOf(`${ROW}`) === 0) {
+          node.data.hProperties = {
+            className: `${BASE_CLASS} ${ROW}`,
+          }
+        }
 
-  visit(markdownAST, `${VISITOR}`, node => {
-    let html = null
-    console.log("node: ", node)
-    if (node.type === `${VISITOR}`) {
-      html = createGrid(node)
-    } else {
-      return
-    }
-
-    node.type = "html"
-    node.children = undefined
-    node.value = html
-  })
-
-  return markdownAST
+        if (config.indexOf(`${COL}`) === 0) {
+          node.data.hProperties = {
+            className: `${BASE_CLASS} ${COL} ${createColClasses(COL, config)}`,
+          }
+        }
+      },
+    },
+  ],
 }
+
+module.exports.setParserPlugins = () => [[containers, options]]

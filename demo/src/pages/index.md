@@ -1,9 +1,11 @@
-# @pauliescanlon/gatsby-remark-grid-system
+::: div row
 
-```grid|50|
-Column at 50%
-```
+::: div col 12|6|7|9
+left content 1
+:::
 
-```grid|50|
-Column at 50%
-```
+::: div col 12|6|5|3
+right content 1
+:::
+
+:::
