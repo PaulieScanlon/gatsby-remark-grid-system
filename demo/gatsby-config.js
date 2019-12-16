@@ -24,7 +24,16 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: ["@pauliescanlon/gatsby-remark-grid-system"],
+        plugins: [
+          {
+            resolve: `@pauliescanlon/gatsby-remark-grid-system`,
+            options: {
+              // padding: 16,
+              // debug: true,
+              breakpoints: [576, 768, 992, 1200],
+            },
+          },
+        ],
       },
     },
   ],

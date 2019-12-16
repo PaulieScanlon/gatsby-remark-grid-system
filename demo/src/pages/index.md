@@ -7,12 +7,12 @@ The numbers next to `col` indicate the number of columns you’d like to use. 12
 ```
 ::: div row
 
-::: div col 12|6|7|9
-    left content 1
+::: div col 12|6|9|10
+    left content
 :::
 
-::: div col 12|6|5|3
-    right content 1
+::: div col 12|6|3|1
+    right content
 :::
 
 :::
@@ -23,12 +23,12 @@ The numbers next to `col` indicate the number of columns you’d like to use. 12
 
 ::: div row
 
-::: div col 12|6|7|9
-left content 1
+::: div col 12|6|9|10
+left content
 :::
 
-::: div col 12|6|5|3
-right content 1
+::: div col 12|6|3|1
+right content
 :::
 
 :::
