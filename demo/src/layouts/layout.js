@@ -4,8 +4,6 @@ import Helmet from "react-helmet"
 
 import PropTypes from "prop-types"
 
-import "./layout.css"
-
 const Layout = ({ children }) => {
   return (
     <StaticQuery
@@ -63,7 +61,7 @@ const Layout = ({ children }) => {
               <meta name="twitter:image:alt" content={description}></meta>
               <meta name="twitter:creator" content={author}></meta>
             </Helmet>
-            <main>{children}</main>
+            <main className="markdown-body">{children}</main>
           </Fragment>
         )
       }}

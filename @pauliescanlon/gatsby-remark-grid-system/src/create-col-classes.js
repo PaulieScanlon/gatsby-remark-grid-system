@@ -1,4 +1,4 @@
-const { classPrefixes, COL, defaultPadding } = require("./const")
+const { classPrefixes, COL } = require("./const")
 
 // https://github.com/twbs/bootstrap/blob/master/dist/css/bootstrap-grid.css
 const colWidths = [
@@ -8,7 +8,7 @@ const colWidths = [
   },
   {
     name: 2,
-    percent: 8.333333,
+    percent: 16.666667,
   },
   {
     name: 3,
@@ -59,22 +59,21 @@ const createColClasses = (breakpoints, padding, debug) => {
 
   if (!breakpoints || !breakpoints.length || breakpoints.length > 4) return
 
-  const gridPadding = padding || defaultPadding
-  const gridDebug = debug ? `outline: 1px solid rebeccapurple; ` : ""
+  const _padding = padding || 0
+  const _debug = debug ? `outline: 1px solid rebeccapurple; ` : ""
 
   const defaultRow = [
-    // `.row { display: flex; flex-wrap: wrap; margin-right: -${gridPadding}px; margin-left: -${gridPadding}px; box-sizing: border-box; }`,
-    `.row { display: flex; flex-wrap: wrap; box-sizing: border-box; }`,
+    `.row { display: flex; flex-wrap: wrap; margin-right: -${_padding}px; margin-left: -${_padding}px; box-sizing: border-box; }`,
   ]
 
   const defaultCol = [
-    `.col { flex-basis: 0; flex-grow: 1; max-width: 100%; ${gridDebug} box-sizing: border-box; }`,
+    `.col { flex-basis: 0; flex-grow: 1; max-width: 100%; ${_debug} box-sizing: border-box; }`,
   ]
 
   const colClasses = [].concat(0, ...breakpoints).map((_, breakpointIndex) =>
     colWidths.map((_, index) => {
       if (breakpointIndex === 0) {
-        return `.${COL}-${classPrefixes[breakpointIndex]}${colWidths[index].name} { position: relative; width: 100%; padding-left: ${gridPadding}px; padding-right: ${gridPadding}px; }`
+        return `.${COL}-${classPrefixes[breakpointIndex]}${colWidths[index].name} { position: relative; width: 100%; padding-left: ${_padding}px; padding-right: ${_padding}px; }`
       } else {
         return `.${COL}-${classPrefixes[breakpointIndex]}${colWidths[index].name} { max-width: ${colWidths[index].percent}%; flex: 0 0 ${colWidths[index].percent}%; } `
       }
@@ -97,8 +96,6 @@ const createColClasses = (breakpoints, padding, debug) => {
       ...mediaQueries
     )
     .join("")
-
-  // console.log(JSON.stringify(flat, null, 2))
 
   return flat
 }

@@ -1,7 +1,28 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+const React = require("react")
 
-// You can delete this file if you're not using it
+exports.onRenderBody = ({ setHeadComponents }) => {
+  return setHeadComponents([
+    <meta name="viewport" content="width=device-width, initial-scale=1" />,
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css"
+    />,
+    <style type="text/css">
+      {`
+            .markdown-body {
+                box-sizing: border-box;
+                min-width: 320px;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 16px;
+            }
+        
+            @media (max-width: 767px) {
+                .markdown-body {
+                    padding: 15px;
+                }
+            }
+            `}
+    </style>,
+  ])
+}
