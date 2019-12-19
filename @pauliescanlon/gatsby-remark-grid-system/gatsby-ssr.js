@@ -1,5 +1,5 @@
 const React = require("react")
-const { createColClasses } = require("./src/create-col-classes")
+const { createStyleSheet } = require("./src/create-style-sheet")
 const { BASE_CLASS } = require("./src/const")
 
 exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
@@ -7,7 +7,7 @@ exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
 
   return setHeadComponents([
     <style key={`${BASE_CLASS}`} className={`${BASE_CLASS}`} type="text/css">
-      {`${createColClasses(breakpoints, padding, debug)}`}
+      {`${createStyleSheet(breakpoints, padding, debug)}`}
     </style>,
   ])
 }

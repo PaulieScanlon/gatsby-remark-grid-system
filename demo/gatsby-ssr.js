@@ -2,12 +2,17 @@ const React = require("react")
 
 exports.onRenderBody = ({ setHeadComponents }) => {
   return setHeadComponents([
-    <meta name="viewport" content="width=device-width, initial-scale=1" />,
+    <meta
+      key="viewport"
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />,
     <link
+      key="stylesheet"
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css"
     />,
-    <style type="text/css">
+    <style key="css" type="text/css">
       {`
             .markdown-body {
                 box-sizing: border-box;

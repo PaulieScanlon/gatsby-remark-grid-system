@@ -40,24 +40,20 @@ module.exports = {
 | Option      | Type    | Reqiured | Default               | Description                    |
 | ----------- | ------- | -------- | --------------------- | ------------------------------ |
 | breakpoints | array   | no       | [576, 768, 992, 1200] | bootstrap inspired breakpoints |
-| padding     | number  | no       | 15                    | ...                            |
-| debug       | boolean | no       | false                 | ...                            |
+| padding     | number  | no       | 16                    | padding applied to each `col`  |
+| debug       | boolean | no       | false                 | adds an outline to each `col`  |
 
 ```js
 ...
 plugins: [
   {
     resolve: `@pauliescanlon/gatsby-remark-grid-system`,
-    options: {
-      ...
-    },
+      options: {
+        ...
+     }
   },
 ]
 ```
-
-## ✨ Styling
-
-TODO
 
 ## 📝 Markdown
 

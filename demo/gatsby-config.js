@@ -28,9 +28,9 @@ module.exports = {
           {
             resolve: `@pauliescanlon/gatsby-remark-grid-system`,
             options: {
-              padding: 16,
+              // padding: 16,
               // debug: true,
-              breakpoints: [576, 768, 992, 1200],
+              // breakpoints: [576, 768, 992, 1200],
             },
           },
         ],

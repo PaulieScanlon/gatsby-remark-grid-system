@@ -1,13 +1,7 @@
 const containers = require("remark-containers")
 
-const {
-  createColClassNames,
-  ROW,
-  COL,
-  BASE_CLASS,
-} = require("./src/create-col-class-names")
-
-module.exports = ({ markdownAST }) => markdownAST
+const { ROW, COL, BASE_CLASS } = require("./src/const")
+const { getClassNames } = require("./src/get-class-names")
 
 const options = {
   default: true,
@@ -23,10 +17,7 @@ const options = {
 
         if (config.indexOf(`${COL}`) === 0) {
           node.data.hProperties = {
-            className: `${BASE_CLASS} ${COL} ${createColClassNames(
-              COL,
-              config
-            )}`,
+            className: `${BASE_CLASS} ${COL} ${getClassNames(config)}`,
           }
         }
       },
