@@ -2,7 +2,8 @@
 
 ::: div col 12
 
-# @pauliescanlon/gatsby-remark-grid-system
+<h1 style='margin-top: 40px;'>@pauliescanlon/gatsby-remark-grid-system </h1>
+A Gatsby remark plugin for responsive grid systems in markdown 🍱
 
 :::
 
@@ -16,7 +17,7 @@
 
 ### Markdown
 
-Given the followint markdown we can make multi-coloumn layouts across 4 breakpoints
+Given the following markdown we can make multi-coloumn layouts across a maximum of 4 breakpoints
 
 :::
 
@@ -47,10 +48,7 @@ Given the followint markdown we can make multi-coloumn layouts across 4 breakpoi
 
 ::: div col 12|6|5|2
 
-```js
- 🏝️
-```
-
+<img style='display: flex; margin: 0 auto; max-width: 220px' src="https://gatsby-remark-grid-system.netlify.com/images/remark-grid-system-demo-image.png"/>
 :::
 
 :::
