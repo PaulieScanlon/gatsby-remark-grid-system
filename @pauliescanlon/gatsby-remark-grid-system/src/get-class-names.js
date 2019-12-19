@@ -1,8 +1,10 @@
-const { classPrefixes, COL } = require("./const")
+const { classPrefixes, COL } = require("./config")
 
 /** getClassNames splits the config by pipe "|" and returns something like col-1 or col-6 depending on what's been passed from markdown */
 
 const getClassNames = config => {
+  if (config.split(`${COL} `).length < 2) return ""
+
   const configArray = config
     .split(`${COL} `)
     .join("")

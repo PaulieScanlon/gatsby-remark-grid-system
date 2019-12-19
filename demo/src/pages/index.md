@@ -1,10 +1,28 @@
+::: div row
+
+::: div col 12
+
 # @pauliescanlon/gatsby-remark-grid-system
 
+:::
+
+:::
+
 <br>
+
+::: div row
+
+::: div col 12
 
 ### Markdown
 
 Given the followint markdown we can make multi-coloumn layouts across 4 breakpoints
+
+:::
+
+:::
+
+<br>
 
 ::: div row
 
@@ -76,6 +94,10 @@ The numbers next to `col` indicates the number of columns you’d like to use. T
 ### Responsive
 
 > If you're on a "desktop" resize your browser to see the widths of the `col`'s change. If you're on "mobile" you should just be seeing nicely stacked content.
+
+:::
+
+::: div col 12|12|2|2
 
 :::
 

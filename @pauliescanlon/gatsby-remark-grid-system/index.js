@@ -1,6 +1,6 @@
 const containers = require("remark-containers")
 
-const { ROW, COL, BASE_CLASS } = require("./src/const")
+const { ROW, COL, BASE_CLASS } = require("./src/config")
 const { getClassNames } = require("./src/get-class-names")
 
 const options = {

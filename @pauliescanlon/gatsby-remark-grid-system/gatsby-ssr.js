@@ -1,6 +1,6 @@
 const React = require("react")
 const { createStyleSheet } = require("./src/create-style-sheet")
-const { BASE_CLASS } = require("./src/const")
+const { BASE_CLASS } = require("./src/config")
 
 exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
   const { breakpoints, padding, debug } = pluginOptions

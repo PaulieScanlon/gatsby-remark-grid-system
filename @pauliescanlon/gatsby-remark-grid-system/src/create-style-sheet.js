@@ -4,16 +4,16 @@ const {
   colWidths,
   defaultPadding,
   defaultBreakpoints,
-} = require("./const")
+} = require("./config")
 
 /** createStyleSheet creates all the css and media quries determined by either the default breakpoints or plugins options breakpoints*/
 
 const createStyleSheet = (breakpoints, padding, debug) => {
-  if (breakpoints && breakpoints.length > 4) return
+  if (breakpoints && breakpoints.length > 4) return ""
 
   const _breakpoints = breakpoints || defaultBreakpoints
   const _padding = padding || defaultPadding
-  const _debug = debug ? `outline: 1px solid rebeccapurple; ` : ""
+  const _debug = debug ? `border: 1px solid hotpink;` : ""
 
   const defaultRow = [
     `.row { display: flex; flex-wrap: wrap; margin-right: -${_padding}px; margin-left: -${_padding}px; box-sizing: border-box; }`,
